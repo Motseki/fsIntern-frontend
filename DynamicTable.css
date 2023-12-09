@@ -1,0 +1,208 @@
+.DynamicTable{
+    width: 100%;
+
+    -ms-user-select: none; user-select: none;
+    -webkit-touch-callout : none;
+    -webkit-user-select:none;
+    -moz-user-select: none;
+    -o-user-select: none;; user-select: none;
+}
+
+.DynamicTable td, th {
+    /* border:  solid red; */
+    text-align: left;
+    padding: 0px 0;
+    height: 75px;
+    width: fit-content;
+    flex-direction: row;
+    /* white-space: nowrap; */
+    /* display: flex; */
+    /* border: solid yellow; */
+}
+
+.DynamicTable th{
+    font-size: 14px;
+    font-weight: 400;
+    color: #373D4A;
+    padding: 0px 0;
+    text-transform: capitalize;
+    height: 50px;
+}
+
+.DynamicTable td{
+    font-size: 14px;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* padding-right:20px; */
+    vertical-align: middle;
+    color: #373D4A;
+  /* max-width: 100px; */
+  /* border: solid red; */
+}
+
+/* .DynamicTable td:nth-child(2) {
+    width: 120px;
+  } */
+
+.DynamicTable .amt{
+    text-align: right;
+    padding-right: 5%;
+    width: 180px;
+    /* border: solid blue; */
+}
+
+.DynamicTable .dateTime{
+ /* border: solid red; */
+ width: 180px;
+ min-width: 80px !important;
+}
+
+.DynamicTable .status{
+  /* border: solid blue; */
+  width: 120px;
+  /* min-width: 80px !important; */
+ }
+
+.DynamicTable .icon-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .DynamicTable  .copy-icon {
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .DynamicTable .copy-icon:hover {
+    color: #000;
+  }
+
+.DynamicTable .txnId{
+  /* border: solid; */
+  vertical-align: middle;
+  padding-right: 30px;
+  /* max-width:80px; */
+  width: 160px;
+}
+
+.DynamicTable .txnId .txn-id-content{
+
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: solid; */
+  width: fit-content;
+}
+
+.DynamicTable .txnId .txn-id-content .txt{
+  /* max-width: 90%; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* min-width: 100px; */
+  /* width: 100px; */
+  /* border: solid gray; */
+  width: 170px;
+}
+
+
+.DynamicTable .txnId i{
+  /* border: solid blue; */
+  font-size: 18px;
+  transition: 100ms;
+  margin-left: 2.5px;
+}
+
+
+.DynamicTable .typ{
+  /* border: solid yellow; */
+  /* max-width: 10px; */
+  width: 160px;
+}
+
+
+  .DynamicTable .type{
+    padding:6px 15px;
+    border-radius: 30px;
+    width: fit-content;
+    font-size: 14px;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.DynamicTable .walle{
+  /* border: solid brown; */
+  width: 160px;
+}
+
+.DynamicTable .wallet{
+  /* border: solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  /* font-weight: 800; */
+  text-transform: capitalize;
+}
+
+
+.DynamicTable .wallet .currency{
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.DynamicTable .source{
+  /* border: solid brown; */
+  width: 140px;
+}
+
+
+.DynamicTable .credit{
+  color: green;
+  background-color: #EDFCEE;
+}
+
+.DynamicTable .debit{
+  color: #F02864;
+  background-color: #FDD8DF;
+}
+
+.DynamicTable .pending{
+  color: #7C859D;
+  background-color: #DCDEE5;
+}
+
+.DynamicTable .canceled{
+  color: #890620;
+  background-color: #FDD8DF;
+}
+
+.DynamicTable .completed{
+  color: #2F67FA;
+  background-color: #EBF0FF;
+}
+
+@media screen and (max-width: 1200px) {
+  .DynamicTable .txnId{
+    padding-right:15px;
+    width: 160px;
+  }
+
+  .DynamicTable .txnId .txn-id-content .txt{
+    width: 120px;
+  }
+}
+
+
+@media screen and (max-width: 950px) {
+  .DynamicTable{
+    display: none;
+  }
+}

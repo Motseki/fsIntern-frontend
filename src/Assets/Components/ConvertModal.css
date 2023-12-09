@@ -1,0 +1,23 @@
+.ConvertModal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    display: none;
+}
+
+
+.ConvertModal .g_input::placeholder{
+    font-size: 16px;
+    color: #373D4A;
+    font-weight: 700;
+}

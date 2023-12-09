@@ -1,0 +1,30 @@
+.imgs_div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.imgs_div .im{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: #dcdee5a7;
+}
+
+.imgs_div img{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: #dcdee5a7;
+}
+
+
+.imgs_div .p1{
+   color: #373D4A;
+   margin-left: 5px;
+}
+
+.imgs_div .p2{
+    color: #373D4A;
+    margin-left: 5px;
+ }

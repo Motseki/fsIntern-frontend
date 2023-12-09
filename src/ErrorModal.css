@@ -1,0 +1,41 @@
+.error_modal{
+    width: 100%;
+    height: fit-content;
+    z-index: 3000;
+    background-color: transparent;
+    position: fixed;
+    z-index: 3000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; 
+    padding: 30px 0;   
+    /* background-color: rgba(0, 0, 0, .15) */
+}
+
+.error_modal .modalContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    height: fit-content;
+    width: fit-content;
+    padding: 0 30px 0 25px;
+    background-color: white;
+    border-radius: 10px;
+    /* box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.5); */
+    outline: 4px solid red;
+    background-color: rgb(255, 97, 97);
+    box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
+    color: black;
+}
+
+.error_modal .modalContent span.close{
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error_modal .modalContent p{
+    font-size: 16px;
+    font-weight: 800;
+}

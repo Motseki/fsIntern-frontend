@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="Finstack" content="Creating seamless exchange procedure for everyone. Buy, sell, save, trade and exchange fiat currencies with 3 simple steps." />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/b13047f116.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/c2eb627060.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols" rel="stylesheet" />
+    
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="seller_details.css">
+    <link rel="stylesheet" href="other.css">
+    <link rel="stylesheet" href="Auth_content.css">
+    <link rel="stylesheet" href="Wallet-index.css">
+    <link rel="stylesheet" href="seller_profile.css">
+    <link rel="stylesheet" href="name_profile.css">
+    <link rel="stylesheet" href="CurrencyBrkCard.css">
+    <link rel="stylesheet" href="DynamicTable.css">
+<link rel="stylesheet" href="DynamicHistory.css">
+<link rel="stylesheet" href="Wallet_history.css">
+<link rel="stylesheet" href="Home.css">
+<link rel="stylesheet" href="seller_details.css">
+<link rel="stylesheet" href="other.css">
+<link rel="stylesheet" href="Auth_content.css">
+<link rel="stylesheet" href="Wallet-index.css">
+<link rel="stylesheet" href="seller_profile.css">
+<link rel="stylesheet" href="name_profile.css">
+  <link rel="stylesheet" href="DynamicHistoryCrd.css">
+<link rel="stylesheet" href="CurrencyBrkCard.css">
+<link rel="stylesheet" href="DynamicTable.css">
+<link rel="stylesheet" href="P2Pindex.css">
+<link rel="stylesheet" href="DynamicHistory.css">
+<link rel="stylesheet" href="AdvertisersTable.css">
+
+
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Open+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Sofia&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Finstack | Currency trading made simple easy</title>
+  <script defer src="/static/js/bundle.js"></script>
+
+</head>
+
+<body>
+    
+ 
+    <!-- <ConvertModal /> -->
+    <header class='home_main'>
+      <!-- <Blog_nav /> -->
+      
+    <nav class='navbarClass' >
+        <!-- <Notification_bar />
+        <Sidenav /> -->
+       <a to='/' class='logo_a'> <img src={logo} alt="wame" class='logo' /></a>
+        <div class='sp'>
+            <a to='/blog_index' class='link'>Our blog</a>
+            <a to='/contactus' class='link'>Contact us</a>
+            <a to="/seller_up" class='link'>Become a seller</a>
+            <a to='/P2PIndex' class='link'>P2P marketplace</a>
+        </div>
+        <div class="user">
+          <div class="n_icon" onClick={openNote}>
+            <i class="material-icons-outlined bell">notifications</i>
+            <div class="not"></div>
+          </div>
+          
+          <div class="profile">
+            <div  class='prof' onClick={handleProfile} ref={profRef}>
+              <div class="user_descrpt">
+                <p class="username">Maverick Egubson</p>
+                <p class="usermail">maverick.eth@gmail.com</p>
+              </div>
+              <div class="userimage">
+                <p class="me">ME</p>
+                <div class="img"></div>
+              </div>
+              <i class="material-icons-outlined dwn">arrow_forward_ios</i>
+            </div>
+           <!-- {profModal &&   -->
+            <div class="profile_modal" id='profile_modal' >
+                <!-- <a to={-1} class='a'><i class="material-icons-outlined">person</i> My Profile</a>
+                <a class='a'><i class="material-icons-outlined">payment</i> Deposit</a>
+                <a class='a'><i class="material-icons-outlined">sell</i> Sell</a>
+                <a class='a'><i class="material-icons-outlined">account_balance_wallet</i> Wallet</a>
+                <a class='a'><i class="material-icons-outlined">insert_drive_file</i> Transaction history</a>
+                <a class='a'><i class="material-icons-outlined">logout</i> Logout</a>
+                 -->
+              </div>
+            <!-- } -->
+          </div>
+             
+        </div>
+      <i class="i ii material-icons" id='i' onClick={sidebarOpen}>menu</i>
+        <!-- {/* <i class="x ii material-icons" id='x'>close</i> */} -->
+  
+    </nav>
+
+        <div class="blg_main">
+            <section class="sectionprof_top">
+            <p class="p1">My Ads</p>
+            <p class="list_ad_button"><i class="material-icons">add</i> List an ad</p>
+            </section>
+            <section class="sectionu1">
+                <div class='name_profile'>   
+                    <div class="u_img">
+                        <p class="txt">ME</p>
+                        <div class="img" style=''></div>
+                    </div>
+                    <div class="u_txt">
+                        <p class="p1">
+                          Mavrick Egbuson
+                         </p>
+                        <p class="p2">
+                            Last Login: 45 mins ago
+                        </p>
+                    </div>
+                </div>
+                <div class="balance">
+                    <img src={wallet_img} alt="" />
+                    <span class="txt">
+                        <p class="p1">Total wallet value</p>
+                        <p class="p2">₦254,328,723.00 <i class="material-icons-outlined" onClick={handleLock}>visibility</i></p>
+                    </span>
+                </div>
+            </section>
+           
+        </div>
+    </header>
+    <main class='blg_main blg_main2 wallet_history_div'>
+
+
+            <!-- HISTORY FILTER SECTION  -->
+            <section class="sort">
+                <form action="">
+                  <label >
+                    <p >Type</p>
+                      <RegularNoIconDrp placeholder='' options={status}  />
+                      <input type="text" class="filter_input" placeholder="Search date">
+                  </label>
+                  <label htmlFor="">
+                    <p>Asset</p>
+                    <input type="text" class="filter_input" placeholder="Enter amount">
+                  </label>
+                  <label htmlFor="">
+                    <p>Type</p>
+                    <input type="text" class="filter_input" placeholder="Pending">
+                  </label>
+                  
+                  <button type='submit' class='submit submit2'>Apply filter</button>
+
+                  <button type='submit' class='submit submit2'>Refresh list</button>
+
+                 
+                </form>
+             </section>
+            <!-- ENDS HERE -->
+
+
+          <!-- <section class="sectiontable"> -->
+          
+            <div class="deposits_div" style=" width: 100%; padding: 0px 0; margin: 40px 0; margin-bottom: 20px; display: flex; justify-content: center;">
+            
+                <!-- DESKTOP TABLE -->
+                <table class="DynamicTable AdvertisersTable" style='width: 85%; table-layout: auto;' >
+                  <thead>
+                    <tr>
+                      <th>Asset / Pair</th>
+                      <th>Price</th>
+                      <th>Total Available</th>
+                      <th>Payment Method</th>
+                      <th>Time remaining</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td class="td1">
+                          <div class="pdiv">
+                            <div class="content">
+                              <p class="uname">USD / NGN</p>
+                            </div>
+                          </div> 
+                        </td>
+  
+                        <td class="td3">
+                            <div class="pdiv">
+                              <div class="content">
+                                <p class="avail"><span>10,123.45</span> USD </p>
+                              </div>
+                            </div> 
+                        </td>
+  
+                        <td class="td3">
+                          <div class="pdiv">
+                            <div class="content">
+                              <p class="avail"><span>10,123.45</span> USD </p>
+                            </div>
+                          </div> 
+                        </td>
+  
+                        <td class="td4">
+                          
+                        <div class="listdiv2">
+                          <p>Gtbank</p>
+                        </div>
+                          
+                        </td>
+  
+  
+                        <td class="td5">
+                            <button class="bcurrency relist">Re-list</button>
+                          <button class="bcurrency time"> 16:32:00</button>
+                          <button class="bcurrency"> Modify ad</button>
+
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              <!-- DESKTOP TABLE -->
+              
+              <!-- MOBILE TABLE VERSION -->
+  
+  
+              <div class="DynamicHistory" id="DynamicHistory">
+                <div key={index} class="DynamicHistoryBox" >
+  
+                  <!-- <p class="user_img">
+                    ME
+                  </p> -->
+                  <div class="DynamicHistoryCrd">
+                    
+                    <div class="sect1">
+                        <div class="source_div">
+                          <div class="source" >USD / NGN</div> 
+                        </div>
+                        <p class="amount" style='font-family: "lora"'; > 735.90 NGN</p>
+                    </div>
+        
+                    <div class="sect1">
+                      <p class="dateTime">1040 orders • 99.60% completion</p>
+                    </div>
+        
+                    </div>
+                 
+                </div>
+  
+  
+            <!-- DYNAMIC TABLE MOBILE MODAL -->
+            <div class="modal" id="DynamicHistoryModal">
+              <div class="modal-content">
+                <p class='bck'><i class="material-symbols-outlined close" onClick='closeMobileTable()'>navigate_before</i> Go back</p>
+                
+                <span class="amount_div">
+                  <div class="top"> <p class='status' >USD / NGN</p> </div>
+                  <span class="amt">
+                    <p class="amount">1,735.90 NGN</p>
+                    <span class="mindet">
+                      <div class='typ'>Time remaining<p class='sub-typ'>16:32:00</p></div>    
+                      <div class='typ'>Price<p class='sub-typ'>1,735.90 NGN</p></div>    
+                      <div class='typ'>Total Available<p class='sub-typ'>10,123.45 NGN</p></div>    
+                      <div class='typ'>Payment Method <p class='sub-typ'>United Bank for Africa</p></div>  
+                    </span>
+                  </span>
+                  <span class="details">
+                    <button class="buynow-btn yellow_btn">
+                     Re-list
+                    </button>
+                    <button class="buynow-btn">
+                      Modify ad
+                     </button>
+                    
+                  </span>
+                </span>
+              </div>
+            </div>
+             <!-- ENDS HERE  -->
+  
+
+                </div>
+
+
+                <!-- ENDS HERE -->
+            
+            <!-- </div> -->
+          </section>
+    </main>
+
+    <!-- FOOTER -->
+      <footer>
+        <div class="one">
+            <span class="sp">
+                <img src={logo} alt="" class="logo" />
+                <p class="t">Finstack is a non-profit organization or accept offers at your preferred rate on our Peer to peer marketplace.</p>
+            </span>
+            <span class="sp asp">
+                <a href="" class="title">REACH US</a>
+                <a to="/blog_index">our blog</a>
+                <a to="/contactus">Contact us</a>
+                <a to="/seller_up">Become a seller</a>
+            </span>
+            <span class="sp">
+                <p class="tt1">Subscribe to our Newsletter</p>
+                <p class="tt2">Never stay out of the loop.</p>
+                <form action="">
+                    <input type="email" name="" id="" placeholder='email@domain.co'/>
+                    <button type="submit"><i class="material-icons">east</i></button>
+                </form>
+            </span>
+        </div>
+        <div class="two">
+            <span class="sp1">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+            </span>
+            <span class="sp2">
+                <a href="">Terms and conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">&copy; All rights reserved. Finstack 2022.</a>
+            </span>
+        </div>
+    </footer>
+<!-- ENDS HERE -->
+
+
+      <script>
+        function closeMobileTable() {
+            document.getElementById('DynamicHistoryModal').style.display = 'none'
+        }
+      </script>
+
+</body>
+</html>

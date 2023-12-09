@@ -1,0 +1,28 @@
+.ProcessingAnimation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+.ProcessingAnimation img{
+    width: 250px;
+    height: 250px;
+}
+
+.ProcessingAnimation p{
+    font-size: 17px;
+   color: #373D4A;
+   font-weight: 500;
+}
+
+
+@media screen and (max-width: 950px) {
+    
+    .ProcessingAnimation img{
+        width: 220px;
+        height: 220px;
+    }
+}

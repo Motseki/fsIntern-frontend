@@ -1,0 +1,252 @@
+.CurrencyBrkCard{
+    border: solid 1px #DCDEE5;
+    border-radius: 15px;
+    height: 205px;
+    width: 30%;
+    margin-top: 35px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 25px;
+    row-gap: 10px;
+}
+
+.CurrencyBrkCard .img{
+    display: flex; align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.CurrencyBrkCard .img img{
+    display: flex; align-items: center;
+    justify-content: left; gap: 10px;
+    font-weight: 700;
+    color: #373D4A;
+    background-color: rgba(207, 204, 204, 0.458);
+    width: 50px;
+    height: 50px;
+    border-radius: 105%;
+    margin-right: 10px;
+
+}
+
+.CurrencyBrkCard .esc{
+    padding: 5px 13px;
+    border-radius: 30px;
+    border: 1px solid #C5C9D3;
+    background-color: #F3F4F6;
+    font-size: 14px;
+    font-weight: 600;
+    /* margin-left: 10px; */
+}
+
+
+.CurrencyBrkCard .t1{
+    display: flex ; align-items: center;
+    justify-content: left; gap: 10px;
+    flex-direction: row;
+    /* border: solid; */
+    font-weight: 700;
+    color: #373D4A;
+    font-size: 16px;
+    margin-top: 25px;
+    text-transform: capitalize;
+    width: fit-content;
+
+}
+
+.CurrencyBrkCard .tt1{
+    /* font-size: 20px; */
+    font-weight: 400;
+    color: #7C859D;
+    text-transform: uppercase;
+    /* border: solid; */
+}
+
+.CurrencyBrkCard .cr{
+    font-weight: 600;
+    color: #373D4A;
+    display: flex; align-items: center;
+    justify-content: left;
+    column-gap: 15px;
+    font-family: 'open sans', sans-serif;
+    font-size: 22px;
+    height: 40px;
+    /* width: 200px; */
+    /* border: solid; */
+    max-width: 90%;
+}
+.CurrencyBrkCard .cr .crt{
+    font-weight: 600;
+    color: #373D4A;
+    display: flex; align-items: center;
+    justify-content: left;
+    column-gap: 15px;
+    font-family: 'open sans', sans-serif;
+    font-size: 22px;
+    height: 100%;
+    min-width: 160px;
+    /* border: solid; */
+    max-width: 300px;
+}
+
+.CurrencyBrkCard .cr i{
+    font-weight: 200;
+    color: #7c859db5;
+    cursor: pointer;
+    margin-left:auto;
+}
+
+
+
+@media screen and (max-width: 1170px) {
+    .CurrencyBrkCard{
+        height: 205px;
+        width: 31%;
+        min-width: 250px;
+    }
+
+    .CurrencyBrkCard .img img{
+        width: 35px;
+        height: 35px;
+    }
+
+    
+    
+}
+
+
+@media screen and (max-width: 1000px) {
+    .CurrencyBrkCard{
+        height: 175px;
+        width: 31%;
+        min-width: 250px;
+        padding: 0 15px;
+    }
+
+    .CurrencyBrkCard .esc{
+        padding: 5px 13px;
+        border-radius: 30px;
+        border: 1px solid #C5C9D3;
+        background-color: #F3F4F6;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+
+    .CurrencyBrkCard .t1{
+        gap: 10px;
+        font-size: 15px;
+        margin-top: 15px;
+    
+    }
+    
+    .CurrencyBrkCard .tt1{
+        /* font-size: 20px; */
+        font-weight: 400;
+        color: #7C859D;
+    }
+
+    .CurrencyBrkCard .cr{
+        /* border: solid; */
+        column-gap: 0;
+    }
+
+
+    .CurrencyBrkCard .cr .crt{
+
+        font-size: 18px;
+        height: 100%;
+        min-width: 140px;
+        /* border: solid; */
+        max-width: 300px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .CurrencyBrkCard{
+        height: 175px;
+        width: 47%;
+        min-width: 250px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .CurrencyBrkCard{
+        height: 150px;
+        width: 48%;
+        min-width: 30px;
+        padding: 0 15px;
+        margin-top: 20px;
+        padding:15px 15px;
+        row-gap: 0;
+    }
+
+
+    .CurrencyBrkCard .img img{
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .CurrencyBrkCard .t1{
+        margin-top: 25px;
+        /* row-gap: 100px;         */
+        font-size: 13px;
+    }
+
+    .CurrencyBrkCard .cr{
+        height: 30px;
+        /* width: 200px; */
+        /* border: solid; */
+        max-width: 100%;
+    }
+
+    .CurrencyBrkCard .cr .crt{
+        font-size: 14px;
+        height: 100%;
+        min-width: 80px;
+        /* border: solid; */
+        max-width: 300px;
+    }
+    
+    .CurrencyBrkCard .cr i{
+        font-weight: 200;
+        font-size: 17px;
+        margin-left: 25px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 530px) {
+    .CurrencyBrkCard{
+        height: fit-content;
+        width: 48%;
+        min-width: 30px;
+        padding: 0 15px;
+        margin-top: 20px;
+        padding: 20px 15px;
+        row-gap: 0;
+    }
+
+    .CurrencyBrkCard .esc{
+        padding: 6px 5px;
+        border-radius: 30px;
+        border: 1px solid #C5C9D3;
+        background-color: #F3F4F6;
+        font-size: 10px;
+        font-weight: 600;
+        /* margin-left: 10px; */
+    }
+}

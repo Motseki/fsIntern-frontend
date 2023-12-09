@@ -1,0 +1,150 @@
+.not_bar{
+    /* border: solid; */
+    width: 450px;
+    height: 100vh;
+    background-color: white;
+    position:fixed;
+    display: flex; align-items: center; justify-content: center;
+    top: 0;
+    right: -150%;
+    /* margin-right: 400px; */
+    z-index: 1000;
+    /* display: none; */
+    box-shadow: 0 0 10px 5px rgb(100, 99, 99, 0.3);
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+}
+
+
+.not_bar .top{
+    width: 100%;
+    padding:0 25px;
+    height: 85px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: 'lora', sans-serif; font-size: 22px; 
+    font-weight: 600;
+    border-bottom: solid 1px #7C859D;
+}
+
+
+.not_bar .top i{
+    color: #7C859D;
+    font-size: 28px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.not_bar .nots {
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    overflow: scroll;
+}
+
+.not_bar .nots .inf{
+    width: 100%;
+    padding: 25px 25px;
+    text-decoration: none;
+    list-style-type: none;
+    /* border: solid; */
+    display: flex; 
+    /* flex-direction: row; */
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    gap: 10px;
+}
+
+.not_bar .nots .inf:hover{
+   background-color: rgb(47, 103, 250, 0.1);
+}
+
+.not_bar .nots .inf .img_div{
+    display: flex; align-items: center; justify-content: center;
+    white-space: nowrap;
+    margin-right: 10px;
+    /* display:block; */
+    width: fit-content;
+    height: fit-content;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.not_bar .nots .inf .img_div img{
+    width: 20px; 
+    height: 20px;
+    /* padding: 0px; */
+
+    /* border-radius: 100%; */
+}
+
+.not_bar .nots .inf .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: fit-content;
+    /* margin-left: 10px; */
+    /* border: solid; */
+    margin-right: 0px;
+    overflow: hidden;
+}
+
+.not_bar .nots .inf .txt .p1{
+    color: #373D4A;
+    font-weight: 600;
+    font-size: 17px;
+    overflow: hidden;
+    width: 95%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.not_bar .nots .inf .txt .p2{
+    color: #373D4A;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 5px;  
+    overflow: hidden;
+    width: 95%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.not_bar .nots .inf .txt .p3{
+    color: #373D4A;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;  
+    overflow: hidden;
+    width: 85%;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
+.not_bar .nots .inf .dot{
+    padding: 2.5px;
+    background-color: #2F67FA;
+    border-radius: 100%;
+}
+
+.color_r{
+   background-color: rgb(255, 0, 0, 0.1); 
+}
+
+.color_g{
+    background-color: #EDFCEE;
+ }
+
+
+ @media screen and (max-width: 700px) {
+    .not_bar{
+        width: 100%;
+    }
+    
+ }

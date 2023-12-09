@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="Finstack" content="Creating seamless exchange procedure for everyone. Buy, sell, save, trade and exchange fiat currencies with 3 simple steps." />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/b13047f116.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/c2eb627060.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols" rel="stylesheet" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="seller_details.css">
+    <link rel="stylesheet" href="other.css">
+    <link rel="stylesheet" href="Auth_content.css">
+    <link rel="stylesheet" href="Wallet-index.css">
+    <link rel="stylesheet" href="seller_profile.css">
+    <link rel="stylesheet" href="name_profile.css">
+      <link rel="stylesheet" href="DynamicHistoryCrd.css">
+    <link rel="stylesheet" href="CurrencyBrkCard.css">
+    <link rel="stylesheet" href="DynamicTable.css">
+    <link rel="stylesheet" href="P2Pindex.css">
+    <link rel="stylesheet" href="DynamicHistory.css">
+    
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Open+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Sofia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Finstack | Currency trading made simple easy</title>
+  <script defer src="/static/js/bundle.js"></script>
+
+</head>
+
+<body>
+    
+ 
+    <!-- <ConvertModal /> -->
+    <header class='home_main'>
+      <!-- <Blog_nav /> -->
+      
+    <nav class='navbarClass' >
+        <!-- <Notification_bar />
+        <Sidenav /> -->
+       <a to='/' class='logo_a'> <img src={logo} alt="wame" class='logo' /></a>
+        <div class='sp'>
+            <a to='/blog_index' class='link'>Our blog</a>
+            <a to='/contactus' class='link'>Contact us</a>
+            <a to="/seller_up" class='link'>Become a seller</a>
+            <a to='/P2PIndex' class='link'>P2P marketplace</a>
+        </div>
+        <span class='log'>
+          <a to="/login" class='link login'>Login</a>
+          <a to="/signup" class='link signup'>Get Started</a>
+      </span>
+             
+        </div>
+      <i class="i ii material-icons" id='i' onClick={sidebarOpen}>menu</i>
+        <!-- {/* <i class="x ii material-icons" id='x'>close</i> */} -->
+  
+    </nav>
+
+    <div class="blg_main " >
+      <section class="sectionprof_top">
+          <div class="sectionp2ptop">
+            <p class="pt1">Peer to peer marketplace</p>
+            <p class="pt2">Trade Currencies & Giftcards with Verified Merchants</p>
+            <div class="radioselect">
+                <p class=''>Currencies</p>
+                <p class='active' >GiftCards</p>
+            </div>
+            <div class="buynsell_div">
+              <p class='active'>Buy</p>
+
+              <!-- Toggle button -->
+              <label class="toggle-switch">
+                <input type="checkbox" checked={isOn} onChange={handleToggle} />
+                <span class="toggle-slider round"></span>
+                <span class="toggle-label"></span>
+              </label>
+
+              <p class='' >Sell</p>
+            </div>
+            <div class="wanttobuy">
+              <p class="txt1" >I want to buy</p>
+              <form action="" class='frm'>
+                <input class='inp' type="text" placeholder='1,000' />
+                <input class='inp' type="text" placeholder='1,000' />
+
+              </form>
+            </div>
+          </div>
+      </section>
+  </div>
+    </header>
+    <main class='Main blg_main blg_main2 wallet_history_div'>
+            <!-- HISTORY FILTER SECTION  -->
+            <section class="sort">
+              <form action="">
+                <label >
+                  <p >Date</p>
+                    <RegularNoIconDrp placeholder='' options={status}  />
+                    <input type="text" class="filter_input" placeholder="Search date">
+                </label>
+                <label htmlFor="">
+                  <p>Amount</p>
+                  <input type="text" class="filter_input" placeholder="Enter amount">
+                </label>
+                <label htmlFor="">
+                  <p>Status</p>
+                  <input type="text" class="filter_input" placeholder="Pending">
+                </label>
+                
+                <button type='submit' class='submit'>Apply filter</button>
+               
+              </form>
+           </section>
+          <!-- ENDS HERE -->
+
+
+
+
+          
+          <div class="deposits_div" style=" width: 85%; padding: 30px 0;">
+            
+              <!-- DESKTOP TABLE -->
+              <table class="DynamicTable AdvertisersTable" style='width: 100%; table-layout: auto; border: none;' >
+                <thead>
+                  <tr>
+                    <th>Advertisers</th>
+                    <th>Price</th>
+                    <th>Available / Limits</th>
+                    <th>Payment Method</th>
+                    <th>Trade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td class="td1">
+                        <div class="pdiv">
+                          <p class="uimg" >ME</p>
+                          <div class="content">
+                            <p class="uname">Jane Cooper <img src='images/verified_img.svg' alt="" /></p>
+                            <p class="udescrpt">1040 orders • 99.60% completion</p>
+                          </div>
+                        </div> 
+                      </td>
+
+                      <td class="td2">      
+                        <div class="pdiv">
+                          <p class="uprice">735.90 <span>NGN</span></p>
+                        </div>               
+                      </td>
+
+                      <td class="td3">
+                        
+                        <div class="pdiv">
+                          <div class="content">
+                            <p class="avail">Available <span>1000.45 USD</span></p>
+                            <p class="avail">Limit <span><span class="">₦</span>100,000 - <span class="">₦</span>736,231.15 </span></p>
+                          </div>
+                        </div> 
+
+                      </td>
+
+                      <td class="td4">
+                        
+                      <div class="listdiv2">
+                        <p>Gtbank</p>
+                      </div>
+                        
+                      </td>
+
+
+                      <td class="td5">
+                        <button class="bcurrency">Buy Giftcard</button>
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+            <!-- DESKTOP TABLE -->
+            
+            <!-- MOBILE TABLE VERSION -->
+
+
+            <div class="DynamicHistory" id="DynamicHistory">
+              <div key={index} class="DynamicHistoryBox" >
+
+                <p class="user_img">
+                  ME
+                </p>
+                <div class="DynamicHistoryCrd">
+                  
+                  <div class="sect1">
+                      <div class="source_div">
+                        <div class="source" >Jane Cooper</div> <img src='images/verified_img.svg' alt="" />
+                      </div>
+                      <p class="amount" style='font-family: "lora"'; > 735.90 NGN</p>
+                  </div>
+      
+                  <div class="sect1">
+                    <p class="dateTime">1040 orders • 99.60% completion</p>
+                  </div>
+      
+                  </div>
+               
+              </div>
+
+
+          <!-- DYNAMIC TABLE MOBILE MODAL -->
+          <div class="modal" id="DynamicHistoryModal">
+            <div class="modal-content">
+              <p class='bck'><i class="material-symbols-outlined close" onClick='closeMobileTable()'>navigate_before</i> Go back</p>
+              
+              <span class="amount_div">
+                <div class="top"> <p class='status' >Jane Cooper</p> <img src='images/verified_img.svg' alt="" /> </div>
+                <span class="amt">
+                  <p class="amount"> 735.49 NGN</p>
+                  <span class="mindet">
+                    <div class='typ'> 1040 orders • 99.60% completion</div>   
+                    <div class='typ'>Available<p class='sub-typ'>1000.45 NGN</p></div>    
+                    <div class='typ'>Payment Method <p class='sub-typ'>United Bank for Africa</p></div>  
+                    <div class='typ'>Limit <p class='sub-typ'>₦100,000 - ₦736,231.15</p></div>    
+                  </span>
+                </span>
+                <span class="details">
+                  <button class="buynow-btn">
+                    Buy Giftcard
+                  </button>
+                </span>
+              </span>
+            </div>
+          </div>
+           <!-- ENDS HERE  -->
+
+
+        </div>
+            
+          </div>
+        </section>
+
+        <section class="section4">
+            <p class="t1">3 EASY STEPS</p>
+            <p class="t2">How It Works</p>
+            <p class="t3">Create or accept offers at your preferred rate on our Peer to peer marketplace</p>
+          <div class="fl">
+            <span>
+             <div class="box"><img src={bag_icon1} alt="wame" /></div>
+             <p class="txt1">Select currency pair</p>
+              <p class="t">Create or accept offers at your preferred rate on our Peer to peer marketplace
+                offers at your preferred</p>
+            </span>
+            <span>
+              <div class="box"><img src={bag_icon2} alt="wame" /></div>
+              <p class="txt1">Transfer Local Money</p>
+              <p class="t">Create or accept offers at your preferred rate on our Peer to peer marketplace
+                offers at your preferred</p>
+            </span>
+            <span>
+              <div class="box"><img src={bag_icon3} alt="wame" /></div>
+              <p class="txt1">Receive funds</p>
+              <p class="t">Create or accept offers at your preferred rate on our Peer to peer marketplace
+                offers at your preferred</p>
+            </span>
+          </div>
+        </section>
+        <section class="moviesect" >
+            <a href="">
+              <img src='images/videolink.svg' alt="" />
+              <p>Watch the tutorial</p>
+            </a>
+        </section>
+    </main>
+      <Foot />
+
+
+
+      <script>
+        function closeMobileTable() {
+            document.getElementById('DynamicHistoryModal').style.display = 'none'
+        }
+      </script>
+</body>

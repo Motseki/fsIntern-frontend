@@ -1,0 +1,158 @@
+*{
+    /* outline: solid 1px greenyellow; */
+}
+
+nav{
+    /* background: #fff; */
+    z-index: 1;
+    width: 100%;
+    /* height: 89px; */
+    /* border-bottom: solid 1px silver; */
+    display: flex; justify-content: left; align-items: center;
+    padding: 0 7%;
+   position: fixed; 
+   /* top: 0;  */
+   /* z-index: 2; */
+    /* overflow: hidden; */
+    /* background-color: black; */
+    /* backdrop-filter: blur(5px); */
+    /* max-width: 2000px; */
+    /* margin: 0 auto; */
+    justify-self: center;
+}
+
+.logo{
+    height: 55px;
+    width: 55px; 
+    margin: 0;
+}
+
+.logo_a{
+    margin-right: 40px;
+   display: flex; align-items: center;
+}
+
+.sp{
+
+}
+
+.sp .link{
+    margin: 0 15px;
+    color: #1f1f1f;
+    font-size: 16px;
+    font-weight: 400; 
+
+}
+
+.sp .link:hover{ 
+    color: #2F67FA; 
+}
+
+.log{
+    margin-left: auto;
+}
+
+.log .link{
+    padding: 9px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.login{
+    color: #2F67FA;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.signup{
+    /* border: solid 1px silver; */
+    /* background-color: #2F67FA; */
+    background-color: #2F67FA;
+    color: white;
+    font-size: 16px;
+}
+
+.signup:hover{
+    background-color: rgb(37, 150, 190, 0.8);
+}
+
+/* .material-icons{
+    display: none;
+} */
+
+.i{
+    display: none !important;
+    /* border: solid; */
+}
+
+.x{
+    margin-left: auto;
+    display: none !important;
+    color: #2F67FA;
+}
+
+@media screen and (min-width: 1300px) {
+    nav{
+        /* padding: 0 5%; */
+        /* border: solid; */
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    nav{
+        padding: 0 5%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    /* nav{
+        padding: %;   
+    } */
+
+    .sp{
+        display: none;
+    }
+
+    .log{
+        margin-right: auto;
+    }
+
+
+    .i{
+        color: #2F67FA;
+        display: flex !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+     nav{
+        padding: 0 7%;
+}
+
+
+
+    .logo_a{
+        margin-right: auto;
+    }
+
+    .log{
+       display: none;
+    }
+
+    .i{
+        color: white;
+        background-color: #2F67FA;
+        border-radius: 100%;
+        padding: 10px;
+        font-size: 16px !important;
+        display: flex !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    nav{
+        /* height: 30px; */
+    }
+
+}

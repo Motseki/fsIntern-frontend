@@ -1,0 +1,25 @@
+
+.curr_opt .curr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: solid 1px #DCDEE5;
+    border-radius: 30px;
+    /* overflow: hidden; */
+    padding: 0;
+    height: 55px;
+    padding: 0px 20px;
+    padding-right: 0;
+}
+
+
+
+.curr_opt .curr .in{
+    outline: none;
+}
+
+.curr_opt .curr .in::placeholder{
+    font-size: 15px;
+}
