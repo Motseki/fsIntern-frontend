@@ -118,6 +118,7 @@ const Signup_otp = () => {
       });
 
       console.log('OTP sent successfully:', otpResponse.data);
+      alert('OTP was successfully resend, please check your email!');
 
     } catch (error) {
       console.error('Failed to re-send OTP:', error.response.data);
