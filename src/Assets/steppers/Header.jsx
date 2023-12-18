@@ -11,7 +11,7 @@ function Header(props) {
             <li className={ props.step === 2 ? `active` : `` }><span><i className="material-icons-outlined">payment</i> 
             </span><p>ID information  {  <i className="material-icons ic">check</i>}</p> </li>
        
-                <li className={ props.step === 3 ? `active` : `` } ><span><i className="material-icons-outlined">text_snippet</i> </span>
+                <li className={ props.status === 3 ? `active` : `` } ><span><i className="material-icons-outlined">text_snippet</i> </span>
                 <p>Preview  { <i className="material-icons ic">check</i>}</p> </li>
         </ul>
            

@@ -3,6 +3,7 @@ import { Link, useLocation, useParams, useNavigate } from 'react-router-dom';
 
 import AuthDataContext from '../Contexts/AuthDataContext';
 
+import { DisplayContext } from '../Contexts/DisplayContext';
 
 import './Auth_content.css'
 // import li_icon1 from "./im"
@@ -22,13 +23,13 @@ import CalcIdAuth from './CalcIdAuth';
 // Motseki
 // import React, {useState} from 'react';
 import Header from '../steppers/Header';
-import Card1 from '../steppers/Card1';
-import Card2 from '../steppers/Card2';
-import Card3 from '../steppers/Card3';
-import Card4 from '../steppers/Card4';
-import Card5 from '../steppers/Card5';
-import Form1 from '../steppers/Form1';
-import Form2 from '../steppers/Form2'
+// import Card1 from '../steppers/Card1';
+// import Card2 from '../steppers/Card2';
+// import Card3 from '../steppers/Card3';
+// import Card4 from '../steppers/Card4';
+// import Card5 from '../steppers/Card5';
+// import Form1 from '../steppers/Form1';
+// import Form2 from '../steppers/Form2'
 // import AuthDataContext from '../Contexts/AuthDataContext';
 // End
 
@@ -52,6 +53,9 @@ const Signup_info = (pops) => {
   const [personal, setPersonal] = useState(true)
   const [idInfo, setIdInfo] = useState(false)
   const [showPreview, setShowPreview] = useState(false)
+
+  const [showReport, setPrevReport] = useState(false)
+
   const [success, setSuccess] = useState(false)
   const [stepOne, setStepOne] = useState(`last`)
   const [stepTwo, setStepTwo] = useState(`last`)
@@ -125,6 +129,7 @@ const handlePlanChange = () => {
 
   return (
     <body>
+    <DisplayContext.Provider value={{personal, setPersonal, idInfo, setIdInfo, showPreview, setShowPreview, showReport, setPrevReport}}> 
     <header>
         <Auth_nav />
     </header>
@@ -140,7 +145,13 @@ const handlePlanChange = () => {
           <p className="p1">Complete registration</p>
           <p className="p2">Create or accept offers at your preferred rate.</p>
 
-          <Header step={display} /> 
+          {/* <Header step={display} />  */}
+
+          <ul>
+          <li className={ personal ? `active` : `${stepOne}` }><span><i className="material-icons-outlined">account_circle</i> </span><p>Personal information { stepOne === `done` && <i className="material-icons ic">check</i>}</p> </li>
+                  <li className={ idInfo ? `active` : `${stepTwo}` }><span><i className="material-icons-outlined">payment</i> </span><p>ID information  { stepTwo === `done`  && <i className="material-icons ic">check</i>}</p> </li>
+                  <li className={ showReport ? `active` : `${stepThree}` } ><span><i className="material-icons-outlined">text_snippet</i> </span><p>Preview  { stepThree === `done` && <i className="material-icons ic">check</i>}</p> </li>
+          </ul>
         </div>
         <div className="cnt">
           <div className="fl1">
@@ -252,6 +263,7 @@ const handlePlanChange = () => {
         </section>
     </main>
     </div>
+    </DisplayContext.Provider>
 </body>
     
   )

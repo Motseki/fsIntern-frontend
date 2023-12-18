@@ -9,9 +9,14 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth_content from './Auth_content';
 import { UserPrevDetailsContext } from '../Contexts/UserPrevDetailsContext';
 import BAS_prev from './BAS_prev';
+import { DisplayContext } from '../Contexts/DisplayContext';
+
+import CountryOpt from './CountryOpt';
 
 function CalcIdAuth(props, display, onclick, backclick) {
   const {formData, setFormData} = useContext(UserInfoDetailsContext);
+
+  const {personal, setPersonal, idInfo, setIdInfo, showPreview, setShowPreview} = useContext(DisplayContext);
 
   const [ShowPInfo, setShowPInfo] = useState(true);
   // const [ShowIdInfo, setShowIdInfo] = useState(false);
@@ -85,7 +90,7 @@ function CalcIdAuth(props, display, onclick, backclick) {
         }
       );
 
-
+      setIdInfo(true);
 
       // Handle the response from the signup API as needed.
       // console.log('Signup successful:', response.data);
@@ -133,6 +138,9 @@ function CalcIdAuth(props, display, onclick, backclick) {
     // else alert("Please fill in all fields correctly.");
 };
 
+const handleSelectedCountry = (selectedValue) => {
+  setCountry(selectedValue);
+};
  
 
   // console.log(accessKey)
@@ -201,13 +209,24 @@ function CalcIdAuth(props, display, onclick, backclick) {
       </span>
 
       <span className="spq">
-        <span className="sp">
+        {/* <span className="sp">
           <label htmlFor="fname">Country</label>
           <input type="text" name="fname" id="" placeholder="Select country"
             value={country}
             onChange={(e) => setCountry(e.target.value)}
           />
+        </span> */}
+
+      <span className="spq">
+          <span className="sp sp2 spC">
+            <label htmlFor="fname">Issuing country</label>
+            <div className="box" style={{ width: 350 }}>
+              <CountryOpt onBankSelect={handleSelectedCountry} />
+            </div>
+          </span>
         </span>
+
+
         
         <span className="sp">
           <label htmlFor="lname">Postal code</label>

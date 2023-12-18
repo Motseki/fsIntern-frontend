@@ -16,15 +16,23 @@ import PidAuthData from '../Contexts/PidAuthData';
 import Auth_nav from './Auth_nav';
 import Header from '../steppers/Header';
 import BAS_prev from './BAS_prev.js';
-import { NavContext } from '../Contexts/NavContent.js';
-import { NavInfoContext } from '../Contexts/NavInfoContext.js';
+import { NavContext } from '../Contexts/NavContent';
+import { NavInfoContext } from '../Contexts/NavInfoContext';
+import { DisplayContext } from '../Contexts/DisplayContext';
 
 
 
 
 function Idi({props, display, onclick, backclick }){
 
+  
+  const [file, setFile] = useState(true);
+
+  const [selfieFile, setSelfieFile] = useState(true);
+
   const {setShowIdInfo} = useContext(NavInfoContext);
+
+  const {setPrevReport} = useContext(DisplayContext);
 
 
   const [ShowPrevInfo, setShowPrevInfo] = useState(true);
@@ -67,8 +75,10 @@ function Idi({props, display, onclick, backclick }){
       );
 
       // navigate('/BAS_prev')
-      setShowPrevInfo(false)
-      setShowIdInfo(true)
+      setShowPrevInfo(false);
+      setShowIdInfo(true);
+
+      setPrevReport(true);
 
       if (response && response.data) {
         console.log('Signup successful:', response.data);
@@ -102,11 +112,15 @@ const handleSelectedCountry = (selectedValue) => {
 const handleIdentityImageUpload = (e) => {
   const file = e.target.files[0];
   setidentity_image(file);
+  setFile(false)
+  // onChange={(e) => setFile(e.target.files[0])}
 };
 
 const handleSelfieUpload = (e) => {
-  const file = e.target.files[0];
-  setselfie(file);
+  const selfie = e.target.files[0];
+  setselfie(selfie);
+
+  setSelfieFile(false);
 };
 
   console.log(identity_type)
@@ -114,6 +128,11 @@ const handleSelfieUpload = (e) => {
   console.log(identity_image)
   console.log(selfie)
 
+
+  function handleChange(e) {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+}
 
   // <UserContext.Provider value={{formData, setFormData, UserDetails, setShowUserDetails}}>
   //       {ShowUserDetails ? <UserDetails/> : <UserForm/>}
@@ -147,24 +166,51 @@ const handleSelfieUpload = (e) => {
           </span>
         </span>
 
+{/* 
+        <span className="spq">
+            <span className="sp sp2">
+              <label htmlFor="fname">Upload mean of identity</label>
+               
+                  
+                <input type="file"  style={{ width: 370 }} onChange={handleChange} />
+            <img src={file} className="sp sp2 sp_inp"  style={{ width: 370 }} alt="" /> 
+       
+            </span>
+        </span> */}
+
+          {/* // input */}
+          {/* <input
+              type="file"
+              id="file"
+              onChange={(e) => setFile(e.target.files[0])}
+          />
+
+         
+          <img src={file ? URL.createObjectURL(file) : "https://default-image.jpg"} alt="" /> */}
+
 
         <span className="spq">
             <span className="sp sp2">
               <label htmlFor="fname">Upload mean of identity</label>
-                <span className="sp_inp" >
+                <span className="sp_inp" >  
+                {file ?
+                  (
                     <span className="msg">
-                        <img src={upload_img} alt="img" />
+                    <img src={upload_img} alt="" /> 
                         <p className="p1">upload image</p>
                         <p className="p2">Accepted format: .pdf, .img, .jpg, .png should not be more than 100kb</p>
-                    </span>
+                        </span>
+                    ) : ''}
 
-                    <input
-  type="file"
-  name="identity_image"
-  id=""
-  onChange={handleIdentityImageUpload}
-/>
-                </span>
+                <input
+                  type="file"
+                  id="file"
+                  onChange={handleIdentityImageUpload}
+                />
+
+                {/* // preview */}
+                <img src={identity_image ? URL.createObjectURL(identity_image) : "https://default-image.jpg"} alt="" />
+              </span>
             </span>
         </span>
 
@@ -183,17 +229,23 @@ const handleSelfieUpload = (e) => {
             <span className="sp sp2">
               <label htmlFor="fname">Upload mean of identity</label>
                 <span className="sp_inp">
+                  {selfieFile ? (
                     <span className="msg">
                         <img src={upload_img} alt="img" />
                         <p className="p1">upload image</p>
                         <p className="p2">Accepted format: .pdf, .img, .jpg, .png should not be more than 100kb</p>
                     </span>
-                    <input
-  type="file"
-  name="selfie"
-  id=""
-  onChange={handleSelfieUpload}
-/>
+                  ) : ''}
+
+                <input
+                    type="file"
+                    name="selfie"
+                    id=""
+                    onChange={handleSelfieUpload}
+                  />
+
+                   {/* // preview */}
+                <img src={selfie ? URL.createObjectURL(selfie) : "https://default-image.jpg"} alt="" />
                 </span>
             </span>
         </span>
